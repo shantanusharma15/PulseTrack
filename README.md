@@ -114,6 +114,4 @@ pulsetrack/
 
 ---
 
-## Resume Description
 
-> Built an end-to-end GitHub ecosystem analytics platform using Python, Apache Airflow, dbt, DuckDB, and Streamlit; automated 6-hour ingestion pipelines, implemented a 3-layer dbt transformation model, and served insights through an interactive dashboard with live SQL querying.
