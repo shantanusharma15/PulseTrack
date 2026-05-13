@@ -1,0 +1,37 @@
+version: 2
+
+sources:
+  - name: main
+    tables:
+      - name: raw_repos
+        description: "Raw GitHub repository data ingested via API"
+        columns:
+          - name: id
+            tests: [not_null]
+          - name: language
+            tests: [not_null]
+          - name: stars
+            tests: [not_null]
+
+models:
+  - name: stg_repos
+    description: "Cleaned and typed repo records"
+    columns:
+      - name: repo_id
+        tests: [not_null]
+      - name: stars
+        tests: [not_null]
+
+  - name: mart_top_repos
+    description: "Top 20 repos per language per snapshot"
+    columns:
+      - name: repo_id
+        tests: [not_null]
+
+  - name: mart_language_trends
+    description: "Aggregated language metrics with growth deltas"
+    columns:
+      - name: language
+        tests: [not_null]
+      - name: snapshot_date
+        tests: [not_null]

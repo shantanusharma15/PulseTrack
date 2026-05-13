@@ -1,0 +1,11 @@
+requests==2.31.0
+duckdb
+dbt-core==1.7.19
+dbt-duckdb==1.7.5
+pandas==2.2.0
+streamlit==1.32.0
+plotly==5.19.0
+python-dotenv==1.0.1
+# Airflow — install separately or use Docker (heavy dependency)
+# apache-airflow==2.8.1
+
